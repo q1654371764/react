@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script src="js/babel.js"></script>
+    <script src="js/react.js"></script>
+    <script src="js/reactdom.js"></script>
+    <script type="text/babel">
+        let {Component} = React;
+        class House extends Component {
+        // TODO
+            render(){
+                return(<div className="House">
+                <h2>House</h2>
+                
+                    <Room />
+                    <Bathroom />
+                </div>)
+            }
+        }
+
+        class Room extends Component {
+        // TODO
+            render(){
+                return(<div className="Room">
+                <h3>Room</h3>
+                    <Man />
+                    <Dog />
+                    <Dog />
+                </div>)
+            }
+        }
+
+        class Bathroom extends Component {
+        // TODO
+            render(){
+                return(<div className="Bathroom">
+                <h3>Bathroom</h3>
+                </div>)
+            }
+        }
+
+        class Man extends Component {
+        // TODO
+            render(){
+                return(<div className="Man">Man
+                </div>)
+            }
+        }
+
+        class Dog extends Component {
+        // TODO
+            render(){
+                return(<div className="Dog">Dog
+                </div>)
+            }
+        }
+        ReactDOM.render(
+            <House/>,
+            document.getElementById('root')
+        )
+    </script>
+</body>
+</html>

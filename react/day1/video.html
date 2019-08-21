@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script src="js/babel.js"></script>
+    <script src="js/react.js"></script>
+    <script src="js/reactdom.js"></script>
+    <script type="text/babel">
+        let data = {
+                type:'录制屏幕',
+                id:'1',
+                con:[
+                    {
+                        title:'窗口/对象',
+                        id:'1',
+                        type:'radio'
+                    },
+                    {
+                        title:'矩形区域',
+                        id:'2',
+                        type:'radio'
+                    },
+                    {
+                        title:'全屏（不含任务栏）',
+                        id:'3',
+                        type:'radio'
+                    },
+                    {
+                        title:'全屏',
+                        id:'4',
+                        type:'radio'
+                    }
+                ]
+            }
+        let dataa = {
+                type:'录制音频',
+                id:'2',
+                typee:'checkbox',
+                con:[
+                    {
+                        title:'麦克风',
+                        id:'1'
+                    },
+                    {
+                        title:'声音',
+                        id:'2'
+                    },
+                    {
+                        title:'音频',
+                        id:'3'
+                    }
+                ]
+            }
+            let dataaa = {
+                type:'',
+                id:'3',
+                con:[
+                    {
+                        title:'录制',
+                        id:'1'
+                    },
+                    {
+                        title:'编辑',
+                        id:'2'
+                    },
+                    {
+                        title:'选项',
+                        id:'3'
+                    }
+                ]
+            }
+
+            let div1 = <div>
+                    <h2 key={data.id}>{data.type}</h2>
+                    {
+                        data.con.map(item=><span key={item.id}><input type={item.type} />{item.title}</span>)
+                    }
+                </div>
+            let div2 = <div>
+                <h2 key={dataa.id}><input type={dataa.typee} />{dataa.type}</h2>
+                <select>
+                {
+                    data.con.map(item=><option key={item.id}>{item.title}</option>)
+                }
+                </select>
+            </div>
+            let div3 = <div>
+                {
+                    dataaa.con.map(item=><button key={item.id}>{item.title}</button>)
+                }
+            </div>
+            let div = <div>
+                {div1}
+                {div2}
+                {div3}
+            </div>
+            ReactDOM.render(div,document.querySelector("#app"))
+    </script>
+</body>
+</html>

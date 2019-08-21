@@ -1,0 +1,16 @@
+1.createStore(reducer,初始状态?)
+创建仓库 调用reducer计算最新的状态
+2.reducer 
+计算最新的状态 它的返回值就是最新的状态
+3.action
+描述状态变化的对象 必须要有type属性
+4.state
+状态
+5.store.getState()
+获取最新状态
+6.store.dispatch(action)
+派发reducer 
+7.store.subscribe(()=>{})
+订阅仓库状态
+8. redux combineReducers
+合并reducer函数的

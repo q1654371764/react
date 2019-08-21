@@ -1,0 +1,34 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+.tablebox {
+    display: flex;
+}
+.tablebox>div{
+    border:1px solid #eee;
+}
+.tablebox>div.active{
+    border-color:red;
+}
+.zoombox{
+    border:1px solid #eee;
+    position: relative;
+}
+.zoombox img{
+    width: 100%;
+    height: 100%;
+}
+
+.zoommask{
+    background: rgba(0,0,0,.5);
+    position: absolute;
+}
+
+.zoompic{
+    position: absolute;
+    top:0;
+    border:1px solid #eee;
+}

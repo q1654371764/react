@@ -1,0 +1,30 @@
+redux
+
+bindActionCreators(actionCreators,dispatch)
+actionCreators:对象
+actionCreators所有的方法必须要返回值，返回值就是action对象
+自动调用dispatch
+
+createStore
+
+combineReducers
+
+applyMiddleware 加载中间件
+
+------------
+redux-logger
+
+redux-thunk
+处理异步action
+改造dispatch 让可以dispatch可以接受函数
+
+-------------------------------------
+
+react-redux
+Provider 提供仓库对象
+connect 连接组件和仓库的 高阶组件
+
+connect(mapStateToProps,mapDispatchToProps)(组件)
+返回值是一个新组件 原组件通过props可以接受到state和触发dispatch的方法
+
+

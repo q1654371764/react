@@ -1,0 +1,48 @@
+.tabletit span{
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.tabletit span.active{
+    background: skyblue;
+    color:#fff;
+}
+
+img{
+    width: 100px;
+}
+
+dl{
+    display: inline-block;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    line-height: none;
+}
+.slidepic{
+    width: 1190px;
+    overflow: hidden;
+}
+
+.slidepic>div{
+    width: 200px;
+    height: 300px;
+    float: left;
+    background: #fff;
+    transition: all 0.8s;
+}
+.slidepic>div p{
+    padding:5px 0;
+}
+.slidepic>div .slidebtn {
+    display: none;
+}
+.slidepic>div.active{
+    width: 390px;
+    background: skyblue;
+}
+.slidepic>div.active .slidebtn{
+    display: block;
+}

@@ -1,0 +1,16 @@
+父子关系
+
+父-》子 props
+
+子-》父 父发送函数子触发函数
+
+
+跨级组件
+context
+***** Provider Consumer 必须有关系
+
+1.创建对象 React.createContext()
+2.引入该对象
+3.Provider 提供者 value属性要传递数据
+4.Consumer 消费者 只能接受一个回调函数 回调函数的参数就是value
+

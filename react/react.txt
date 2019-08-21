@@ -1,0 +1,135 @@
+ React.createElement(标签名，属性，子元素）返回值：React元素
+JSX 遇见<开始解析html   遇见{开始解析js语句
+什么是虚拟dom   描述dom节点的对象
+更改状态是一个异步方法  setState（要修改的状态{}，状态执行完成之后执行的回调函数）
+
+
+创建阶段
+constructor  组件被实例时调用  1次 接受props  定义组件状态
+componentWillMount  组件将被渲染 1次      （废除）
+render 组件正在被渲染，在这里进行diff算法 比较最小差异实现dom局部更新，每次状态改变都会触发render
+componentDidMount  组件渲染完成 1次   在这页面获取初始数据
+
+数据发生改变
+state发生变化时执行的
+shouldComponentUpdate  应该更新组件吗？  返回true更新   返回false不更新
+componentWillUpdate  （废除）
+render
+componentDidUpdate
+
+props状态发生变化时执行
+componentWillReveiceProps 组件将接受新的props    （废除）
+shouldComponentUpdate    应该更新组件吗？
+componentWillUpdate    将要更新
+render   正在更新ompo
+componentDidUpdate   更新完成
+
+销毁
+componentWillunmount  组件奖被销毁
+
+新增
+static  getDerivedStateFromProps   获取state从props
+返回nullstate不会重新更新  返回{}  setstate
+shuoleComponentUpdate
+render
+getSnapShotBrfore
+
+ref
+获取真实dom节点
+ref在react元素和组件元素上都可以添加
+字符串：this.refs.属性值
+函数：(el)=>{
+	真实dom节点
+}
+react元素 返回的是真实dom节点
+组件元素 返回的是组件实例
+
+react-dom
+findDOMNODE 根据组件实例返回真实dom节点
+unmountComponentAtNode 接受根元素render方法的第二个参数 卸载根元素内所有的元素
+
+react合成事件给document对象绑定的，在渲染真实dom节点时监听事件标识  驼峰事件名  通过
+事件委托形式派发
+react合成事件可以和原生事件混用，一旦原生事件阻止事件冒泡就不会触发document的事件，
+所有的合成事件都不能使用
+
+跨级组件 
+context
+Provider Consumer 之间必须有关系
+1.创建对象  React.createCnotext()
+2.引入该对象
+3.Provider 提供者  value 属性要传递数据
+4.Consumer 消费者 只能接受一个回调函数 回调函数的参数就是value
+
+高阶函数   可以把。函数当做参数或者返回值为一个函数
+高阶组件   本身也是一个函数，可以接受一个组件当做参数，返回一个新组件
+
+路由：
+url地址对应一个视图 （html结构，json）
+单页面应用 spa
+1.hash  兼容性好，但是不会产生浏览历史记录
+2.history  兼容性差，会产生浏览历史记录
+
+http   ://    locahlhost   :8080    /home/index       ?id=10         #hash
+ 协议         域名             端口号  路径pathname     查询字符串    path
+
+react-router-dom
+HashRouter hash模式的根组件
+BroswerRouter  history模式的根组件
+
+withRouter
+高阶组件  函数  可以实现路由信息的分发
+
+BroswerRouter
+histoty模式的路由根组件
+
+hashRouter
+hash模式的路由根组件
+
+Route
+航线 配置path和component exact 精确匹配
+path:路径
+component 输出的组件 可以是一个函数
+
+Switch
+实现匹配第一项Route
+
+Redirect
+重定向
+from
+to
+
+import 指令 静态  运行时全部打包
+import Home  from  路径
+
+import（路径）调import会单独打包出一个chunk.Js
+返回值promise对象 resolve成功接收的结果就是模块对象
+
+createStore(reducer,初始状态)
+创建仓库  调用reducer计算最新的状态
+reducer
+计算最新的状态  他的返回值就是最新的状态
+action
+描述状态变化的对象  必须要有type属性
+state
+状态
+store.getState()
+获取最新状态
+store.dispatch（action）
+派发reducer
+store.subscribe
+订阅仓库状态
+redux combineReducers
+合成reducer函数的
+
+{Provider,connect} react-redux
+
+Provider 提供仓库
+connect 连接仓库和组件状态
+
+bindActionCreators（actionCreatos,dispatch）
+actionCreators:对象
+自动调用dispatch
+
+redux-thunk
+处理异步action

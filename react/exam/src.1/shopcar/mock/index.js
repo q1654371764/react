@@ -1,0 +1,47 @@
+const data = {
+    content:[
+        {
+            title:'超市',
+            check:false,
+            shopItem:[
+                {
+                    title:'面包',
+                    check:false,
+                    price:5.5,
+                    count:1
+                },
+                {
+                    title:'辣条',
+                    check:false,
+                    price:3.5,
+                    count:1
+                }
+            ]
+        },
+        {
+            title:'衣服',
+            check:false,
+            shopItem:[
+                {
+                    title:'男装',
+                    check:true,
+                    price:40,
+                    count:1
+                },
+                {
+                    title:'女装',
+                    check:false,
+                    price:50,
+                    count:1
+                },
+                {
+                    title:'童装',
+                    check:false,
+                    price:30,
+                    count:1
+                }
+            ]
+        }
+    ]
+}
+export default data;

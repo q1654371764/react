@@ -1,0 +1,8 @@
+import 指令  静态 运行时全部打包
+import Home from 路径
+
+
+import(路径) 调import会单独打包出一个chunk.js
+返回值promise对象 resolve成功接受的结果就是模块对象
+
+

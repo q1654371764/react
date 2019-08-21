@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script src="js/babel.js"></script>
+    <script src="js/react.js"></script>
+    <script src="js/reactdom.js"></script>
+    <script type="text/babel">
+        let data = [
+            {
+                title:"1611A",
+                id:1
+            },
+            {
+                title:"1611B",
+                id:2
+            }
+        ]
+        let div = <div className="box" id="a">
+            <ul>
+            {
+                data.map(item=><li key={item.id}>{item.title}</li>)
+            }
+            </ul>
+        </div>
+
+        // let li = React.createElement("li",{key:1},[])
+        // let ul = React.createElement("ul",{key:1},li)
+        // let div = React.createElement("div",{
+        //     className:"text",
+        //     id:"a"
+        // },ul)
+        ReactDOM.render(div,document.querySelector("#app"))
+
+
+    </script>
+</body>
+</html>

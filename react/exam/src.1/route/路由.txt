@@ -1,0 +1,35 @@
+路由:
+    url地址对应一个视图（html结构，json，）
+
+单页面应用 spa
+1.hash 兼容性但是不会产生浏览历史记录
+2.history  兼容性较差，会产生浏览历史记录 
+
+
+http://localhsot:8000/home/index?id=10#hash
+
+
+1.npm i react-router-dom
+
+withRouter
+高阶组件-》函数 可以实现路由信息的分发
+
+BroswerRouter 
+history模式的路由根组件
+
+hashRouter
+hash模式的路由根组件
+
+Route
+航线 配置path和component 
+exact精准匹配
+path：路径
+component 输出组件可以是函数
+
+Switch
+实现匹配第一个Route
+
+Redirect
+重定向
+from 
+to

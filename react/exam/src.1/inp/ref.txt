@@ -1,0 +1,19 @@
+ref 
+获取真实dom节点
+
+ref在react元素和组件元素上都可以添加
+字符串：this.refs.属性值
+函数：(el)=>{
+    el真实dom节点
+}
+
+react元素 返回的是真实dom节点
+组件元素 返回的是组件实例
+
+
+react-dom
+findDOMNode 根据组件实例返回真实dom节点
+unmountComponentAtNode 接受根元素render方法的第二参数 卸载根元素内所有的元素
+
+
+

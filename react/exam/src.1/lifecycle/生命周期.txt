@@ -1,0 +1,63 @@
+1.创建阶段  
+constructor 组件被实例时调用 1次  接受props 定义组件状态
+componentWillMount 组件将被渲染  1次 尽量不要改变state  （废除）
+render 组件正在被渲染
+componentDidMount 再见初始渲染完成 1次  在这页面初始获取数据
+
+
+2.数据发生变化  
+state 状态发生变化时执行的
+shouldComponentUpdate 应该更新组件吗？ 返回true更新视图 返回false不执行更新
+componentWillUpdate 组件将要更新 （废除）
+render 组件正在更新
+componentDidUpdate  组件更新完成
+
+
+props 状态发生变化时执行
+componentWillReveiceProps 组件将接受新的props （废除）
+shouldComponentUpdate 应该更新组件吗？ 返回true更新视图 返回false不执行更新
+componentWillUpdate 组件将要更新
+render 组件正在更新
+componentDidUpdate  组件更新完成
+
+
+
+3.销毁
+componentWillUnmount 组件将被销毁 清理事件清理定时器
+
+
+
+新增
+static getDerivedStateFromProps  获取state从props
+
+getSnapshotBeforeUpdate  Snapshot快照  
+配合componentDidUpdate返回值是componentDidUpdate第三个参数
+
+
+出生阶段
+1.constructor
+2.static getDerivedStateFromProps 
+3.render
+4.componentDidMount
+
+生长阶段
+1.static getDerivedStateFromProps 
+2.shouldComponentUpdate
+3.render
+4.getSnapshotBeforeUpdate
+5.componentDidUpdate
+
+卸载
+componentWillUnmount
+
+
+检测异常
+componentDidCatch
+
+
+constructor
+render
+componentDidMount
+componentDidUpdate
+componentWillUnmount
+

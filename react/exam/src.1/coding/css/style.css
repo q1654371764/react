@@ -1,0 +1,36 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+body,html,#root,.app{
+    width:100%;
+}
+
+.main{
+    width: 1200px;
+    margin: 10px auto;
+    display: flex;
+}
+
+
+.main nav{
+    width: 200px;
+}
+
+.main nav a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px
+}
+
+.main nav a.active{
+    background: #eee;
+}
+
+.rightContent{
+    flex:1;
+    overflow: hidden;
+}
